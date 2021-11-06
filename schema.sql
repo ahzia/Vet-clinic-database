@@ -36,4 +36,11 @@ ALTER TABLE animals ADD COLUMN species_id INT,
 ALTER TABLE animals ADD COLUMN owner_id INT,
   ADD CONSTRAINT fk_owners
   FOREIGN KEY (owner_id)
-  REFERENCES owners (id); 
+  REFERENCES owners (id);
+
+CREATE TABLE vets(
+  id SERIAL PRIMARY KEY,
+  name TEXT,
+  age INT,
+  date_of_graduation date
+);
